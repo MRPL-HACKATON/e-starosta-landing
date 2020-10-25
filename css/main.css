@@ -13,6 +13,10 @@
   height: 4.5rem;
 }
 
+.is-relative {
+  z-index: 1;
+}
+
 .phone-container {
   position: absolute;
   bottom: -56px;
