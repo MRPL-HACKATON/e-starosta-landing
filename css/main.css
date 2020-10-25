@@ -15,14 +15,14 @@
 
 .phone-container {
   position: absolute;
-  bottom: -47px;
+  bottom: -56px;
   right: 20px;
 }
 
 .phone-video {
-  width: 240px;
-  height: 522px;
-  margin: 10px
+  width: 288px;
+  height: 628px;
+  margin: 12px
 }
 
 .phone-frame {
@@ -31,6 +31,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 
 .giant-text {
