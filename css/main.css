@@ -38,6 +38,14 @@
   object-fit: contain;
 }
 
+.lamp-container {
+  margin-top: -150px;
+}
+
+.ruler-container {
+  margin-top: -100px;
+}
+
 .giant-text {
   font-size: 32px;
   font-family: DrukTextWideCyr, Arial, sans-serif;
@@ -74,4 +82,8 @@ body {
 
   opacity: 0;
   transform: translateY(100px);
+}
+
+.hero.is-primary, .button.is-primary {
+  background-color: #1400FF;
 }
