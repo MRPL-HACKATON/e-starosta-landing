@@ -35,11 +35,17 @@
 }
 
 .giant-text {
-  font-size: 56px;
+  font-size: 32px;
   font-family: DrukTextWideCyr, Arial, sans-serif;
   font-weight: bold;
   text-transform: uppercase;
   color: #555555;
+}
+
+@media screen and (min-width: 1216px) {
+  .giant-text {
+    font-size: 56px;
+  }
 }
 
 body {
