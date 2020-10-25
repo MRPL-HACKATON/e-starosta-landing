@@ -14,10 +14,9 @@
   })
 
   function hasClass(element, className) {
-    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1;
+    return (' ' + element.className + ' ').indexOf(' ' + className+ ' ') > -1
   }
 
-  let scrollPos = 0;
   let elList = document.querySelectorAll('.make-it-shown')
 
   elList.forEach((el) => {
@@ -27,45 +26,38 @@
   setTimeout(checkPosition)
 
   function isScrolledIntoView(el) {
-    var rect = el.getBoundingClientRect();
-    var elemTop = rect.top;
-    var elemBottom = rect.bottom;
+    var rect = el.getBoundingClientRect()
+    var elemTop = rect.top
+    var elemBottom = rect.bottom
 
     // Only completely visible elements return true:
     // var isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
     // Partially visible elements return true:
-    var isVisible = elemTop < window.innerHeight && elemBottom >= 0;
-    return isVisible;
+    var isVisible = elemTop < window.innerHeight && elemBottom >= 0
+    return isVisible
   }
 
   function checkPosition() {
-    let windowY = window.scrollY;
-    if (windowY < scrollPos) {
-      // Scrolling UP
-    } else {
-      // Scrolling DOWN
-      elList.forEach((el) => {
-        if (isScrolledIntoView(el)) {
-          el.classList.remove('hidden')
-        }
-      })
-    }
-    scrollPos = windowY;
+    elList.forEach((el) => {
+      if (isScrolledIntoView(el)) {
+        el.classList.remove('hidden')
+      }
+    })
   }
   function debounce(func, wait = 10, immediate = true) {
-    let timeout;
+    let timeout
     return function() {
-      let context = this, args = arguments;
+      let context = this, args = arguments
       let later = function() {
-        timeout = null;
-        if (!immediate) func.apply(context, args);
-      };
-      let callNow = immediate && !timeout;
-      clearTimeout(timeout);
-      timeout = setTimeout(later, wait);
-      if (callNow) func.apply(context, args);
-    };
-  };
+        timeout = null
+        if (!immediate) func.apply(context, args)
+      }
+      let callNow = immediate && !timeout
+      clearTimeout(timeout)
+      timeout = setTimeout(later, wait)
+      if (callNow) func.apply(context, args)
+    }
+  }
 
   window.addEventListener('scroll', debounce(checkPosition));
 })()
