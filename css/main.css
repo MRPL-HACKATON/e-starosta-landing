@@ -35,3 +35,18 @@ body {
   font-family: DrukTextWideCyr, Arial, sans-serif;
   font-weight: bold;
 }
+
+.make-it-shown {
+  transition-property: opacity, transform;
+  transition-duration: .8s;
+
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+.make-it-shown.hidden {
+  transition-duration: 0s;
+
+  opacity: 0;
+  transform: translateY(100px);
+}
