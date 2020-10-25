@@ -1,0 +1,37 @@
+@font-face {
+  font-family: DrukTextWideCyr;
+  font-weight: bold;
+  src: url("../fonts/DrukTextWideCyr-Bold.woff") format("woff"), url("../fonts/DrukTextWideCyr-Bold.ttf")  format("truetype");
+}
+
+.is-divider {
+  width: 100%;
+  border-top: 1px solid #C4C4C4;
+}
+
+.navbar-brand {
+  height: 4.5rem;
+}
+
+.phone-example {
+  position: absolute;
+  bottom: -43px;
+  right: 20px;
+}
+
+.giant-text {
+  font-size: 56px;
+  font-family: DrukTextWideCyr, Arial, sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+body {
+  font-family: Roboto, Arial, sans-serif;
+}
+
+.DrukTextWideCyr{
+  font-family: DrukTextWideCyr, Arial, sans-serif;
+  font-weight: bold;
+}
