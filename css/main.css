@@ -13,14 +13,37 @@
   height: 4.5rem;
 }
 
+.navbar-item.disabled:hover {
+  background-color: transparent;
+}
+
 .is-relative {
   z-index: 1;
 }
 
+.phone-section {
+  background-color: #f5f5f5;
+  padding: 1.5rem 0;
+}
+
 .phone-container {
-  position: absolute;
-  bottom: 10px;
-  right: 20px;
+  position: relative;
+  margin: 0 auto;
+  width: 316px;
+  height: 624px;
+  padding: 1px;
+}
+
+@media screen and (min-width: 769px) {
+  .phone-section {
+    padding: 0;
+  }
+
+  .phone-container {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+  }
 }
 
 .phone-slider {
@@ -51,13 +74,25 @@
   object-fit: contain;
 }
 
-.lamp-container {
-  margin-top: -150px;
+.slick-footer {
+  font-size: 14px;
+  line-height: 14px;
+  padding: 16px 0;
+  color: #989898;
+  font-size: 500;
 }
 
-.ruler-container {
-  margin-top: -100px;
+@media screen and (min-width: 769px) {
+  .slick-footer {
+    margin-top: -46px;
+  }
 }
+
+.is-outlined-primary, .is-outlined-primary:hover{
+  border-color: #1400FF;
+  color: #1400FF;
+}
+
 
 .giant-text {
   font-size: 32px;
@@ -97,6 +132,6 @@ body {
   transform: translateY(100px);
 }
 
-.hero.is-primary, .button.is-primary {
+.hero.is-primary, .button.is-primary, .button.is-primary:hover {
   background-color: #1400FF;
 }
