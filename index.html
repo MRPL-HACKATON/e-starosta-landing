@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>eStarosta Landing</title>
+
+  <meta property="og:title" content="eStarosta Bot">
+  <meta property="og:site_name" content="e-starosta-landing">
+  <meta property="og:url" content="https://mrpl-hackaton.github.io/e-starosta-landing/">
+  <meta property="og:description" content="онлайн-помічник, який дозволяє студентам бути у курсі актуальної інформації щодо розкладу занять">
+  <meta property="og:image" content="img/Logo.svg">
+
+  <title>eStarosta Bot</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
@@ -62,7 +69,14 @@
               онлайн-помічник, який дозволяє студентам бути у курсі актуальної інформації щодо розкладу занять.
             </h3>
             <a href="http://t.me/estarosta_bot" target="_blank">
-              <button class="button is-link is-uppercase is-large DrukTextWideCyr">Спробувати</button>
+              <button class="button is-link is-uppercase is-large DrukTextWideCyr">
+                <span class="icon is-medium">
+                  <img src="img/telegram.svg" alt="Telegram Icon">
+                </span>
+                <span>
+                  Спробувати
+                </span>
+              </button>
             </a>
           </div>
         </div>
@@ -71,7 +85,13 @@
   </section>
   <section>
     <div class="container is-hidden-mobile">
-      <img src="img/Phone.svg" alt="Phone example" class="phone-example make-it-shown">
+      <div class="phone-container make-it-shown">
+        <video autoplay muted loop class="phone-video">
+          <source src="files/phone-example.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <img src="img/Phone.svg" alt="Phone example" class="phone-frame">
+      </div>
     </div>
   </section>
   <section id="product" class="hero has-background-white is-fullheight">
