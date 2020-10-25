@@ -59,6 +59,33 @@
     }
   }
 
-  window.addEventListener('scroll', debounce(checkPosition));
+  window.addEventListener('scroll', debounce(checkPosition))
+
+
+  function activateSlider(containerId, interval) {
+    let nextIndex = 0
+    var nodes = document.getElementById(containerId).querySelectorAll('*')
+
+    console.log(nodes)
+    const changeHandler = function() {
+      nodes.forEach((node, i) => {
+        if (i === nextIndex) {
+          node.classList.add('active')
+        } else {
+          node.classList.remove('active')
+        }
+      })
+      nextIndex++
+      if (nextIndex >= nodes.length) {
+        nextIndex = 0
+      }
+    }
+
+    changeHandler()
+    setInterval(changeHandler, interval)
+  }
+
+  activateSlider('screenSlider', 5000)
 })()
+
 
